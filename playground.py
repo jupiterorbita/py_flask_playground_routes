@@ -7,8 +7,9 @@ def redirectMe():
   return "got to /play"
 
 @app.route('/play')
+@app.route('/play/')
 def index():
-  return render_template("index.html")
+  return render_template("index.html", repeat_x = 3)
 
 @app.route('/play/<int:repeat_times>')
 def repeat(repeat_times):

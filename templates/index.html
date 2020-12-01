@@ -36,9 +36,15 @@
 
     <div class="container">
       <!--  -->
-      {% for i in range(0, repeat_x): %}
-      <div class="box" style="background-color:{{ color }}"></div>
-      {% endfor %}
+      {% if repeat_x and color: %} {% for i in range(0, repeat_x): %}
+      <div class="box" style="background-color: {{ color }}"></div>
+      {% endfor %} {% elif repeat_x: %} {% for i in range(0, repeat_x): %}
+      <div class="box" style="background-color: blue"></div>
+      {% endfor %} {% else %}
+      <div class="box" style="background-color: blue"></div>
+      <div class="box" style="background-color: blue"></div>
+      <div class="box" style="background-color: blue"></div>
+      {% endif %}
       <!--  -->
     </div>
   </body>
