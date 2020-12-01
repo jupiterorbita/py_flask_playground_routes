@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>playground</title>
+    <style>
+      * {
+        /* outline: 1px solid red; */
+        box-sizing: border-box;
+      }
+      div.container {
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: space-around; */
+        margin: 0 auto;
+        max-width: 1000px;
+        min-height: 300px;
+        /* background-color: red; */
+      }
+      div.box {
+        display: inline-block;
+        vertical-align: top;
+        width: 200px;
+        height: 200px;
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; font-family: sans-serif">Welcome</h1>
+    <hr />
+    <p>repeat: {{ repeat_x }}</p>
+    <p>color: {{ color }}</p>
+
+    <div class="container">
+      <!--  -->
+      {% for i in range(0, repeat_x): %}
+      <div class="box" style="background-color:{{ color }}"></div>
+      {% endfor %}
+      <!--  -->
+    </div>
+  </body>
+</html>
